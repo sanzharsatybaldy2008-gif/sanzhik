@@ -1,4 +1,5 @@
-# 15) enumerate
-words = ["a", "b", "c"]
-for idx, w in enumerate(words):
-    print(idx, w)
+# 15)break на 5
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
