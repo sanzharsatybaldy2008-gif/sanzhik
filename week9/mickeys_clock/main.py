@@ -1,21 +1,23 @@
 import pygame
-from clock import load_assets, draw_clock
+from clock import load_images, draw_clock
 
 pygame.init()
 
 screen = pygame.display.set_mode((1200, 700))
 pygame.display.set_caption("Mickey Clock")
 
+font = pygame.font.SysFont("Arial", 36)
 clock = pygame.time.Clock()
-assets = load_assets()
 
-done = False
-while not done:
+clock_img,left_hand, right_hand = load_images()
+
+running = True
+while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            done = True
+            running = False
 
-    draw_clock(screen, assets)
+    draw_clock(screen, font, clock_img, left_hand, right_hand)
 
     pygame.display.flip()
     clock.tick(60)

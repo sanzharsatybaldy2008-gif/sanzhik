@@ -1,2 +1,5 @@
 a=input()
-print(type(a))
+if a.isdigit() :
+    print("int")
+else:
+    print("str")    

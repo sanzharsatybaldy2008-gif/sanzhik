@@ -5,4 +5,5 @@ path = "."
 items = os.listdir(path)
 
 print(f"Содержимое директории {path}:")
-print(items)
+for name in items:
+    print(name)
